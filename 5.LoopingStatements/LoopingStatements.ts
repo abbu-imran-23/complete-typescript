@@ -20,9 +20,11 @@
  * }
  */
 
-for (let i = 0; i < 5; i++) {
-  console.log(`Iteration ${i + 1}`);
+const codingLanguages: string[] = ["JavaScript", "TypeScript", "Python"];
+for (let i = 0; i < codingLanguages.length; i++) {
+  console.log(`Language: ${codingLanguages[i]}`);
 }
+// Output: Language: JavaScript, Language: TypeScript, Language: Python
 
 /******************* 2. for...of Loop *********************/
 /**
@@ -42,6 +44,7 @@ const footballClubs: string[] = [
 for (const club of footballClubs) {
   console.log(`Club: ${club}`);
 }
+// Output: Club: Real Madrid FC, Club: Barcelona FC, Club: Manchestar United FC, Club: Liver Pool FC
 
 /******************* 3. for...in Loop *********************/
 /**
@@ -64,14 +67,16 @@ const userDetails: UserDetails = {
   city: "New York",
 };
 
-for (const key in user) {
-  console.log(`${key}: ${user[key]}`);
+for (const key in userDetails) {
+  console.log(`${key}: ${userDetails[key]}`);
 }
+// Output: name: John, age: 30, city: New York
 
 const fruits: string[] = ["Apple", "Banana", "Cherry"];
 for (const index in fruits) {
   console.log(`Index ${index}: ${fruits[index]}`);
 }
+// Output: Index 0: Apple, Index 1: Banana, Index 2: Cherry
 
 /******************* 4. forEach Loop *********************/
 /**
@@ -93,6 +98,8 @@ const celebraties: string[] = [
 celebraties.forEach((celebrity, index) => {
   console.log(`Index ${index}: ${celebrity}`);
 });
+// Output: Index 0: Leonardo DiCaprio, Index 1: Scarlett Johansson, Index 2: Robert Downey Jr.,
+// Index 3: Emma Watson, Index 4: Will Smith
 
 /******************* 5. while Loop *********************/
 /**
@@ -108,6 +115,7 @@ while (counter < 3) {
   console.log(`Counter: ${counter}`);
   counter++;
 }
+// Output: Counter: 0, Counter: 1, Counter: 2
 
 /******************* 6. do...while Loop *********************/
 /**
@@ -123,6 +131,7 @@ do {
   console.log(`Count: ${count}`);
   count++;
 } while (count < 3);
+// Output: Count: 0, Count: 1, Count: 2
 
 /**
  * Summary:
@@ -132,3 +141,5 @@ do {
  * - Use `while` when the condition needs to be checked before each iteration.
  * - Use `do...while` when the block should execute at least once.
  */
+
+export {};

@@ -39,6 +39,7 @@ console.log(Math.abs(-5)); // 5
 // Rounding
 console.log(Math.round(4.4)); // 4
 console.log(Math.round(4.6)); // 5
+console.log(Math.round(4.5)); // 5
 
 // Rounding UP and DOWN
 console.log(Math.ceil(7.2)); // 8 (Rounds up)
@@ -73,3 +74,5 @@ console.log(Math.PI); // 3.141592653589793 (Pi constant)
 // Logarithms
 console.log(Math.log(10)); // 2.302585092994046 (Natural log of 10)
 console.log(Math.log10(10)); // 1 (Log base 10 of 10)
+
+export {};

@@ -12,6 +12,17 @@
  */
 const numbers: number[] = [1, 2, 3, 4, 5];
 const languages: string[] = ["JavaScript", "TypeScript", "Python"];
+const mixedArray: (string | number | boolean)[] = [
+  "Alice",
+  25,
+  true,
+  "Bob",
+  30,
+];
+
+console.log("Numbers", numbers); // [1, 2, 3, 4, 5]
+console.log("Languages", languages); // ["JavaScript", "TypeScript", "Python"]
+console.log("Mixed Array", mixedArray); // [ 'Alice', 25, true, 'Bob', 30 ]
 
 /******************* 2. Object *********************/
 /**
@@ -23,11 +34,15 @@ type Person = {
 };
 const person: Person = { name: "John", age: 30 };
 
+console.log("Person", person); // { name: "John", age: 30 }
+
 /******************* 3. Tuple *********************/
 /**
  * Represents a fixed number of elements, where each element has a known type.
  */
 const user: [string, number] = ["Alice", 25];
+
+console.log("User", user); // ["Alice", 25]
 
 /******************* 4. Enum *********************/
 /**
@@ -41,4 +56,6 @@ enum HttpStatusCode {
   INTERNAL_SERVER_ERROR = 500,
 }
 const statusCode: HttpStatusCode = HttpStatusCode.OK;
-console.log(statusCode); // 200
+console.log("Status Code", statusCode); // 200
+
+export {};

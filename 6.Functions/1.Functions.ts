@@ -15,6 +15,7 @@
 /**
  * A function that does not accept any parameters and performs a specific task.
  */
+
 function greet(): void {
   console.log("Hello TypeScript!");
 }
@@ -25,6 +26,7 @@ greet(); // Hello TypeScript!
 /**
  * A function that accepts parameters to perform specific tasks using input values.
  */
+
 function addTwoNumbers(num1: number, num2: number): number {
   return num1 + num2;
 }
@@ -35,6 +37,7 @@ console.log(addTwoNumbers(2, 3)); // 5
 /**
  * A function where a parameter is assigned a default value if no value is passed.
  */
+
 function addThreeNumbers(num1: number, num2: number, num3: number = 5): number {
   return num1 + num2 + num3;
 }
@@ -46,6 +49,7 @@ console.log(addThreeNumbers(5, 5, 10)); // 20
 /**
  * A function where some parameters are optional (denoted by `?`).
  */
+
 function addNumbers(num1: number, num2: number, num3?: number): number {
   return num3 ? num1 + num2 + num3 : num1 + num2;
 }
@@ -57,6 +61,7 @@ console.log(addNumbers(5, 5, 5)); // 15
 /**
  * A function that accepts a variable number of arguments using the REST operator (`...`).
  */
+
 function calculateTotalPrice(...prices: number[]): number {
   let totalPrice = 0;
   for (const price of prices) {
@@ -66,3 +71,5 @@ function calculateTotalPrice(...prices: number[]): number {
 }
 
 console.log(calculateTotalPrice(10, 20, 5, 30, 5, 50)); // 120
+
+export {};

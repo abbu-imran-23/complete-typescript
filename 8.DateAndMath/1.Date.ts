@@ -62,3 +62,5 @@ const date2 = new Date(2024, 5, 15); // June 15, 2024
 console.log(date1 > date2); // false
 console.log(date1 < date2); // true
 console.log(date1.getTime() === date2.getTime()); // false (Comparison by time)
+
+export {};

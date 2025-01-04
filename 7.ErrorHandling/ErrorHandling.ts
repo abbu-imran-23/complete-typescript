@@ -23,13 +23,32 @@
  * }
  */
 
+const jsonString = '{"name": "Alice", "age": 30, "isActive": true}';
+
 try {
-  const result = JSON.parse("invalidJSON"); // This will throw a SyntaxError
-  console.log(result);
+  // Converts a JSON string into a JavaScript object.
+  const result = JSON.parse(jsonString);
+  console.log("Result", result);
+  console.log("try block executed successfully");
 } catch (error) {
   console.error("An error occurred:", error.message);
 } finally {
-  console.log("Execution of try-catch block completed.");
+  console.log("finally block executed successfully");
+}
+
+/****************************************************************************/
+
+const jsonObject = { name: "Alice", age: 30, isActive: true };
+
+try {
+  // Converts a JavaScript object into a JSON string.
+  const result = JSON.stringify(jsonObject);
+  console.log("Result", result);
+  console.log("try block executed successfully");
+} catch (error) {
+  console.error("An error occurred:", error.message);
+} finally {
+  console.log("finally block executed successfully");
 }
 
 /******************* 2. Common Use Cases for `try...catch` *********************/
@@ -116,3 +135,5 @@ try {
  *       const data = defaultConfig;
  *     }
  */
+
+export {};

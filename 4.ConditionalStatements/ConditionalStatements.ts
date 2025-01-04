@@ -42,7 +42,7 @@ if (isUserLoggedIn) {
 const userAge: number = 20;
 const canVote: string =
   userAge >= 18 ? "You are eligible to vote." : "You are not eligible to vote.";
-console.log(canVote); // Output: You are eligible to vote.
+console.log("Voting Staus", canVote); // Output: You are eligible to vote.
 
 /******************* 4. if-else-if Ladder *********************/
 /**
@@ -88,3 +88,5 @@ switch (day) {
  * - Use `if-else-if` for multiple conditions that need sequential evaluation.
  * - Use `switch` for cleaner code when dealing with multiple possible values of a single variable.
  */
+
+export {};

@@ -19,14 +19,18 @@
 let employeeId: string | number;
 
 employeeId = "Hello"; // Valid
+console.log("Employee ID:", employeeId); // "Hello"
+
 employeeId = 42; // Valid
+console.log("Employee ID:", employeeId); // 42
+
 // employeeId = true; // Error: Type 'boolean' is not assignable to type 'string | number'.
 
 /**
  * Example: Array with Union Type
  */
 const mixedArray: (string | number)[] = ["Alice", 25, "Bob", 30];
-console.log(mixedArray); // ['Alice', 25, 'Bob', 30]
+console.log("Mixed Array", mixedArray); // ['Alice', 25, 'Bob', 30]
 
 /******************* 2. Intersection Type *********************/
 /**
@@ -44,21 +48,33 @@ type User = {
 };
 
 type Admin = {
-  role: "admin";
+  hasReadAndWriteAccess: boolean;
 };
 
-type AdminUser = User & Admin;
+type general = {
+  hasReadAccess: boolean;
+};
 
 /**
  * Example: Intersection Type
  */
+
+type AdminUser = User & Admin;
 const admin: AdminUser = {
   name: "Admin",
   email: "admin@example.com",
-  role: "admin",
+  hasReadAndWriteAccess: true,
 };
 
-console.log(admin); // { name: 'Admin', email: 'admin@example.com', role: 'admin' }
+type GeneralUser = User & general;
+const user: GeneralUser = {
+  name: "User",
+  email: "user@gmail.com",
+  hasReadAccess: true,
+};
+
+console.log("Admin", admin); // { name: 'Admin', email: 'admin@example.com', hasReadAndWriteAccess: true }
+console.log("User", user); // { name: 'User', email: 'user@gmail.com', hasReadAccess: true }
 
 /******************* Summary *********************/
 /**
@@ -70,3 +86,5 @@ console.log(admin); // { name: 'Admin', email: 'admin@example.com', role: 'admin
  * - Represents a value that combines properties from multiple types.
  * - Use for creating composite types that satisfy multiple requirements.
  */
+
+export {};

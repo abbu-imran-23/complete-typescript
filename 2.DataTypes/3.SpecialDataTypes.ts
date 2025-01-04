@@ -13,8 +13,13 @@
  * Use sparingly as it defeats the purpose of static typing.
  */
 let dynamicValue: any = "Hello";
+console.log("Dynamic Value:", dynamicValue); // "Hello"
+
 dynamicValue = 42;
+console.log("Dynamic Value:", dynamicValue); // 42
+
 dynamicValue = true;
+console.log("Dynamic Value:", dynamicValue); // true
 
 /******************* 2. Unknown *********************/
 /**
@@ -34,6 +39,7 @@ if (typeof unknownValue === "string") {
 function logMessage(message: string): void {
   console.log(message);
 }
+
 logMessage("Hello Typescript!"); // Hello Typescript!
 
 /******************* 8. Never *********************/
@@ -45,3 +51,5 @@ function throwErrorMessage(errorMessage: string): never {
   throw new Error(errorMessage);
 }
 throwErrorMessage("Invalid Function");
+
+export {};
