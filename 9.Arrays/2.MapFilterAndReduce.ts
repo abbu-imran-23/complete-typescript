@@ -13,13 +13,15 @@
 
 const nonSquaredNumbers: number[] = [1, 2, 3, 4, 5];
 
+console.log("Non-Squared Numbers", nonSquaredNumbers); // [1, 2, 3, 4, 5]
+
 // Example 1: Squaring each number
 const squaredNumbers = nonSquaredNumbers.map((num) => num * num);
-console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+console.log("Squared Numbers", squaredNumbers); // [1, 4, 9, 16, 25]
 
 // Example 2: Transforming to a boolean array (true if even, false if odd)
 const booleanNumbers = nonSquaredNumbers.map((num) => num % 2 === 0);
-console.log(booleanNumbers); // [false, true, false, true, false]
+console.log("Transformed boolean array", booleanNumbers); // [false, true, false, true, false]
 
 /**
  * The callback function in `map()` takes three parameters:
@@ -61,17 +63,17 @@ console.log(numbersWithIndices); // ["Index 0: 1", "Index 1: 2", "Index 2: 3", "
 
 const rawArray: (number | string)[] = [1, "TypeScript", 2, "JavaScript", 3];
 
+console.log("Raw Array", rawArray); // [1, "TypeScript", 2, "JavaScript", 3]
+
 // Example 1: Filtering only numbers
-const onlyNumbers = rawArray.filter(
-  (item): item is number => typeof item === "number"
-);
-console.log(onlyNumbers); // [1, 2, 3]
+const onlyNumbers = rawArray.filter((item) => typeof item === "number");
+console.log("Filtered with only numbers", onlyNumbers); // [1, 2, 3]
 
 // Example 2: Filtering strings
 const scripts = rawArray.filter(
-  (item): item is string => typeof item === "string" && item.includes("Script")
+  (item) => typeof item === "string" && item.includes("Script")
 );
-console.log(scripts); // ["TypeScript", "JavaScript"]
+console.log(`filtered with string and elements includes "Script"`, scripts); // ["TypeScript", "JavaScript"]
 
 /**
  * The callback function in `filter()` takes three parameters:
@@ -83,7 +85,7 @@ console.log(scripts); // ["TypeScript", "JavaScript"]
 const numbersGreaterThanTwo = nonSquaredNumbers.filter(
   (num, index) => num > 2 && index % 2 === 0
 );
-console.log(numbersGreaterThanTwo); // [3, 5]
+console.log("Filtered with number greater than 2", numbersGreaterThanTwo); // [3, 5]
 
 /******************* 3. reduce() *********************/
 /**
@@ -98,14 +100,14 @@ const totalExpense = expenses.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   0
 );
-console.log(totalExpense); // 600
+console.log("Total Expense", totalExpense); // 600
 
 // Example 2: Finding the maximum value
 const maxExpense = expenses.reduce(
   (max, currentValue) => (currentValue > max ? currentValue : max),
   expenses[0]
 );
-console.log(maxExpense); // 300
+console.log("Maximum Expense", maxExpense); // 300
 
 /**
  * The reducer function in `reduce()` takes four parameters:
@@ -121,3 +123,5 @@ console.log(maxExpense); // 300
  * - Use `filter()` for selecting specific data.
  * - Use `reduce()` for aggregating data into a single result.
  */
+
+export {};
