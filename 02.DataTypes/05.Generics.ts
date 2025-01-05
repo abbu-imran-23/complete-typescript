@@ -145,3 +145,5 @@ console.log("User Name", userName); // "Charlie"
  * 2. Use constraints to restrict types and ensure safety.
  * 3. Combine generics with utility types and real-world examples for better coding.
  */
+
+export {};
