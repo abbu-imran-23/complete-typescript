@@ -70,6 +70,50 @@ This repository covers the following key TypeScript concepts:
 - Methods on Array
 - Map, Filter and Reduce
 
+### 11. **Strings**
+
+- String Declaration and Initialization
+- String Methods
+- Template Literals
+
+### 12. **Objects**
+
+- Object Declaration and Initialization
+- Accessing and Modifying Properties
+- Object Destructuring
+
+### 13. **Interfaces**
+
+- Defining Interfaces
+
+- Optional and Readonly Properties
+- Extending Interfaces
+
+### 14. **Promises**
+
+- Creating and Consuming Promises
+
+- Chaining with .then
+- Error Handling with .catch
+- Using async/await for Promises
+
+### 15. **Object-Oriented Programming**
+
+- Classes and Objects
+- Inheritance
+- Polymorphism
+- Abstraction
+- Encapsulation
+
+### 16. **ES6+ Features**
+
+- Arrow Functions
+- Template Literals
+- Destructuring (Arrays and Objects)
+- Spread and Rest Operators
+- Modules and Imports
+- Optional Chaining and Nullish Coalescing
+
 ## How to Use
 
 1. Clone the repository:
